@@ -21,7 +21,7 @@ We welcome contributions from developers of all levels! To get started:
 
       ```shell
     git commit -m "Add your message here "
-      5. Push to your branch
+5. Push to your branch
 
     ```shell
     git push origin my-contribution
