@@ -1,45 +1,37 @@
 function updateClock() {
+  const now = new Date();
+  const dayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
+  const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][now.getMonth()];
+  const date = now.getDate();
+  const year = now.getFullYear();
+  let hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const period = hours >= 12 ? 'PM' : 'AM';
 
-	var now = new Date();
-	var dayname = now.getDay(),
-		month = now.getMonth(),
-		date = now.getDate(),
-		year = now.getFullYear(),
-		hours = now.getHours(),
-		min = now.getMinutes(),
-		sec = now.getSeconds(),
-		period = "AM";
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+  }
 
-	var months = ["Janaury", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
+  const formattedHours = hours < 10 ? '0' + hours : hours;
+  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+  const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
 
-	if (hours == 0)
-		hours = 12;
-
-	if (hours > 12) {
-		// hours  = hours -12;
-		period = "PM";
-	}
-
-	// add 0 in the beginning of number if less than 10
-	hours = (hours < 10) ? "0" + hours : hours;
-	min = (min < 10) ? "0" + min : min;
-	sec = (sec < 10) ? '0' + sec : sec;
-
-	document.querySelector("#dayname").innerHTML = days[dayname];
-	document.querySelector("#month").innerHTML = months[month];
-	document.querySelector("#daynum").innerHTML = date;
-	document.querySelector("#year").innerHTML = year;
-	document.querySelector("#hour").innerHTML = hours;
-	document.querySelector("#minutes").innerHTML = min;
-	document.querySelector("#seconds").innerHTML = sec;
-	document.querySelector("#period").innerHTML = period;
-
+  document.querySelector('#dayname').textContent = dayName;
+  document.querySelector('#month').textContent = month;
+  document.querySelector('#daynum').textContent = date;
+  document.querySelector('#year').textContent = year;
+  document.querySelector('#hour').textContent = formattedHours;
+  document.querySelector('#minutes').textContent = formattedMinutes;
+  document.querySelector('#seconds').textContent = formattedSeconds;
+  document.querySelector('#period').textContent = period;
 }
 
-function intiClock() {
-	updateClock();
-	window.setInterval("updateClock()", 1);
+function initClock() {
+  updateClock();
+  setInterval(updateClock, 1000); // Update every second
 }
 
-intiClock();
+initClock();
