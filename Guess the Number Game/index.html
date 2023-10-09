@@ -5,13 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the Number Game</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Loader/loader.css">
+    <style>
+        body{
+            height: 100vh;
+            display: flex; 
+            place-items: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .lds-spinner div:after { 
+            background: #ff0000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Guess the Number Game</h1>
-    <p>Guess a number between 1 and 100:</p>
-    <input type="text" id="guessInput">
-    <button id="guessButton">Submit Guess</button>
-    <p id="message"></p>
+   
+
+    <div class="lds-spinner" id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="datetime" id="content" style="display:none;" >
+        <h1>Guess the Number Game</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="text" id="guessInput">
+        <button id="guessButton">Submit Guess</button>
+        <p id="message"></p>
+    </div>
+
+   
+
+    <script> 
+		function initClock() { 
+		  setTimeout(function() { 
+			document.getElementById('loader').style.display = 'none'; 
+			document.getElementById('content').style.display = 'block';
+		  }, 2000); 
+		}
+	 
+		initClock();
+	  </script>
 
     <script src="script.js"></script>
 </body>
