@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Here</h2>
+        <form action="#" id="loginform">
+            <div class="form-group">
+                <label for="username">Username - </label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password - </label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group" style="display: flex; justify-content: center">
+                <button type="submit" id="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js"></script>
+
+    <script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAjbDdBMVVqTgxvY744o9PJIK5t2OQiZBU",
+        authDomain: "login-page-28293.firebaseapp.com",
+        databaseURL: "https://login-page-28293-default-rtdb.firebaseio.com",
+        projectId: "login-page-28293",
+        storageBucket: "login-page-28293.appspot.com",
+        messagingSenderId: "253799267710",
+        appId: "1:253799267710:web:03e2775c009b2108e4c72f",
+        measurementId: "G-9BB73XDWNQ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Get ref to database services
+    const db = getDatabase(app);
+
+    document.getElementById("submit").addEventListener('click', function(e) {
+        e.preventDefault();
+
+        set(ref(db, 'user/' + document.getElementById("username").value),
+        {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+        });
+
+        alert("Login Sucessfull  !");
+    })
+ </script>
+</body>
+</html>
