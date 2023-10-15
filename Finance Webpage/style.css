@@ -1,0 +1,67 @@
+*{
+    justify-content: center;
+}
+.heading{
+    display: block;
+    text-align: center;
+}
+.dashboard{
+    display: flex;
+    gap: 20rem;
+    justify-items: center;
+    border: 2px solid brown;
+}
+.deposit{
+    display: block;
+    text-align: center;
+    width: 50rem;
+    color:blueviolet;
+    border: 5px solid rebeccapurple;
+    margin: 10px;
+}
+label{
+    text-align: start;
+    color: blue;
+}
+input[type="tel"],input[type="text"]{
+    margin-bottom: 20px;
+    border: 5px solid lightblue;
+    border-radius: 4px;
+}
+input[type="radio"]{
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    margin-bottom: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: aqua;
+    border-color: blue;
+    border-radius: 8px;
+}
+.balance{
+    text-align: center;
+    border: 5px solid rebeccapurple;
+    width: 250px;
+    margin: 10px;
+    padding-top: 2%;
+}
+
+table{
+    border: 2px solid black;
+    margin:20px;
+    margin-top: 30px;;
+    width: 95%;
+}
+th{
+    border: 1px solid;
+}
+
+th,td{
+    align-items: start;
+    text-align: start;
+    padding-left: 15%;
+    
+}
