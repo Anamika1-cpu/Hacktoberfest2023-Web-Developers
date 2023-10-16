@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1> Finance Webpage</h1>
+    </div>
+    <div class="dashboard">
+        <div class="deposit">
+            <h1> Input</h1>
+            <label> Amount:</label><br>
+            <input type="tel" placeholder="Amount" name="amount" id="amount"/><br>
+            <label> Description:</label><br>
+            <input type="text" placeholder="Description" name="description" id="description"/><br>
+            <form id="radiogroup">
+            <input type="radio" id="credit" name="mode" value="credit"/>
+            <label for="credit">Credit</label><br>
+            <input type="radio" id="debit" name="mode" value="debit"/>
+            <label for="debit">Debit</label><br><br>
+            </form>
+            <button> Add</button>
+        </div>
+        <div class="balance">
+            <h1> Current Balance</h1>
+            <h1 class="current-balance"> Rs. <a id="bal">0</a></h2>
+        </div>
+    </div>
+    <div class="history">
+        <table>
+            <thead>
+            <tr>
+                <th>Description</th>
+                <th>Mode</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
