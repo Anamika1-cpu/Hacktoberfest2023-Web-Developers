@@ -1,18 +1,24 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    /* background-color: #8EC5FC; */
+    /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+    background: rgba(0,0,0,0.45)url('./image/table1.jpg')no-repeat center center/cover;
+    background-blend-mode: darken;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: white;
 }
 
 .login-container {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: none;
+    opacity: 0.76;
+    /* border: 2px solid white; */
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -34,14 +40,18 @@ body {
 }
 
 .form-group input {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding-bottom: 5px;
+    background-color: transparent;
+    margin: 5px 0;
+    color: white;
 }
 
 .form-group button {
-    background-color: #007bff;
+    background-color: #1c6a46;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -50,9 +60,8 @@ body {
     transition: all ease-in-out 0.2s;
     width: 30%;
 }
-
 .form-group button:hover {
-    background-color: #0056b3;
+    background-color: #1d4a17;
     transform: translateY(-3px);
 }
 
