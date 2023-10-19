@@ -1,0 +1,112 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #F4E2D8;
+  color: #333;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Headings */
+h2 {
+    margin: 10px 0 20px;
+    font-style: bold;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen */
+    animation: slideIn 1s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/* Container styles */
+.container {
+  background-color: #F0D3D1;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  padding: 30px;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Result container */
+.result-container {
+  background-color: #D1CDCB;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+}
+
+/* Result text */
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* Scrollbar styles (Webkit) */
+#result::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Buttons and interactive elements */
+.btn,
+.btn-large,
+.result-container .btn {
+  border: none;
+  background: #A69285;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Button hover glow effect */
+.btn:hover,
+.btn-large:hover,
+.result-container .btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  letter-spacing: 3px;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+/* Settings section */
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
