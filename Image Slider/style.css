@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 60%;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0 0 3px grey;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for each individual image slide */
+.img-slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid black;
+    transition: transform 1s;
+}
+
+.slide-btn {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.slide-btn button {
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.slide-btn button:hover {
+    font-size: 25px;
+    padding: 5px;
+    letter-spacing: 3px;
+    background-color: #0056b3
+}
+
+.slide-btn button:active {
+    font-size: 25px;
+    padding: 5px;
+    letter-spacing: 3px;
+    background-color: #022245
+}
