@@ -1,0 +1,73 @@
+.keypad
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.work
+{
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  text-align: center;
+}
+input[type="text"] {
+  height: 50px;
+  width: 98%;
+  border: none;
+  background-color: #9582a7;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  margin: 4px 2px;
+  
+}
+input[type="text"]:checked
+{
+  background-color: #010002;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  margin: 4px 2px;
+}
+.keys {
+  height: 22em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+ 
+}
+.keys:hover {
+  background-color: #c2a3cc;
+  cursor: pointer;
+}
+.operator {
+  background-color: #c2acd8;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  color:black;
+}
+.number
+{
+  background-color: #ebe3f2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  color:black
+}
