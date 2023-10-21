@@ -50,9 +50,10 @@ button{
     width: 17vw; 
     height:10vh;
     margin: 2px;
-    background-color:#98d8ce;
+    background-color:#596ce6;
     font-size:1.5em;
-    color:black;
+    color:rgb(251, 251, 251);
+    font-weight: bold;
     
 } 
 #equal{
@@ -76,6 +77,6 @@ footer{
 }
 
 button:hover{
-    opacity:0.5;
+    opacity:0.4;
   }
   
