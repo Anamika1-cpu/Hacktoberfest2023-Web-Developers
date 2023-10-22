@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+  Select Effect :
+    <select id="selectImgEffect">
+        <option value="Fade">Fade</option>
+        <option value="Slide">Slide</option>
+    </select>
+    Time in seconds:
+    <select id="selectImgDuration">
+        <option value="0.5">0.5</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <input id="btnEnlarge" type="button" value="Enlarge" />
+    <input id="btnShrink" type="button" value="Shrink" />
+    <br /><br />
+    <img id="mainImage" style="border:3px solid grey" src="assets/p1.jpeg" height="500" width="540" />
+    <br />
+    <div id="divId">
+       <img class="imgStyle" src="assets/p1.jpeg" />
+        <img class="imgStyle" src="assets/p2.jpg" />
+        <img class="imgStyle" src="assets/p3.jpg" />
+        <img class="imgStyle" src="assets/p4.jpg" />
+        <img class="imgStyle" src="assets/p5.jpg" />
+    </div>
+</body>
+</html>
