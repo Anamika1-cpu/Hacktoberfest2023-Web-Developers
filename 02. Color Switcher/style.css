@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+  
+body{
+    background-color: #2A2F4F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+#button{
+    width: 0;
+    height: 0;
+    display: none;
+}
+  
+label{
+    display: block;
+    width: 110px;
+    height: 50px;
+    background-color: #FDE2F3;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+label::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #2a2f50;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.5s;
+}
+  
+#button:checked + label:after{
+    background-color: #FDE2F3;
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+  
+#button:checked + label{
+    background-color: #2A2F4F;
+}
+  
+label:active:after{
+    width: 60px;
+}
